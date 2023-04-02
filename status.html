@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block content %}
+<h1> Attendance Status </h1>
+
+    {% for item in all %}
+     <strong> {{ item.staffname }} {{ item.subject}}</strong><br/> 
+     
+     <li>yashini:{{ item.name1 }} <br/>
+    <li>sufiyan:{{ item.name2 }} <br/>
+    <li>pranaav:{{ item.name3 }} <br/> <br/>
+     </li>
+     <hr> 
+      
+    {%  endfor %}  
+{% endblock %}

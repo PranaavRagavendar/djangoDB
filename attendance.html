@@ -1,0 +1,38 @@
+ {% extends 'base.html' %}
+{% block content %}
+<h1>Attendance sheet</h1>  
+<br/>
+<br/>
+
+<form method="POST" action="{% url 'attendance' %}">
+   {% csrf_token %}
+    <div class="form-group">
+      
+      <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="staffname"
+      name="staffname" value={{staffname}}>
+      
+    </div>
+    <div class="form-group">
+      
+        <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="subject" name="subject" value={{subject}}>
+        
+      </div>
+      <div class="form-group">
+      
+        <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Yashni" name="name1" value={{name1}}>
+        
+      </div>
+      <div class="form-group">
+      
+        <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Sufiyan" name="name2" value={{name2}}>
+        
+      </div>
+      <div class="form-group">
+      
+        <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Pranaav" name="name3" value={{name3}}>
+        
+      </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}
